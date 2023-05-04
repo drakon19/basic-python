@@ -1,0 +1,139 @@
+Diseño de una API para una app de gym
+
+GET http://api.gymbros.com/events
+Accept: application/json
+
+Response:
+{Status Code: 000
+Content-type: application/json
+{
+    "events": [
+        {
+            "id": 1,
+            "name": "Pilates",
+            "date": "03/05/2023",
+            "price": 500
+        },
+        {
+            "id": 2,
+            "name": "Box",
+            "date": "05/05/2023",
+            "price": 200
+        }
+    ]
+}
+}
+
+GET http://api.gymbros.com/edit-perfil
+Accept: application/json
+
+Response:
+{Status Code: 000
+Content-type: application/json
+{
+    "edit-perfil": [
+        {
+            "id": 1,
+            "name": "Daniel Ramirez",
+            "date-birthday": "03/01/1999",
+            "username": "Drakon"
+        }
+    ]
+}
+}
+
+POST http://api.gymbros.com/events
+Accept: application/json
+
+Body:{
+    "name": "Pilates",
+    "date": "03/05/2023",
+    "price": 500
+}
+
+Response:
+{
+    Status Code: 201 (Created)
+    Content-type: application/json
+    {
+        "id": 1,
+        "name": "Pilates",
+        "date": "03/05/2023",
+        "price": 500
+    }
+}
+
+POST http://api.gymbros.com/edit-perfil
+Accept: application/json
+
+Body:{
+    "name": "Daniel Ramirez",
+    "date-birthday": "03/01/1999",
+    "username": "Drakon"
+}
+
+Response:
+{
+    Status Code: 201 (Created)
+    Content-type: application/json
+    {
+        "id": 1,
+        "name": "Daniel Ramirez",
+        "date-birthday": "03/01/1999",
+        "username": "Drakon"
+    }
+}
+
+
+PUT http://api.gymbros.com/events
+Accept: application/json
+Body:
+{
+    "price": 500
+}
+
+Response:
+{
+    Status Code: 201 (Created)
+    Content-type: application/json
+    {
+        "id": 1,
+        "name": "Pilates",
+        "date": "03/05/2023",
+        "price": 500
+    }
+}
+
+PUT http://api.gymbros.com/edit-perfil
+Accept: application/json
+Body:
+{
+    "user-name": "Drakon"
+}
+
+Response:
+{
+    Status Code: 201 (Created)
+    Content-type: application/json
+    {
+        "id": 1,
+        "name": "Daniel Ramirez",
+        "date-birthday": "03/01/1999",
+        "username": "Drakon"
+    }
+}
+
+
+DELETE http://api.gymbros.com/events
+Accept: application/json
+
+Response:
+Status Code: 200 (OK)
+Content-type: application/json
+
+DELETE http://api.gymbros.com/edit-perfil
+Accept: application/json
+
+Response:
+Status Code: 200 (OK)
+Content-type: application/json
