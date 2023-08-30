@@ -1,0 +1,11 @@
+{
+    "python.defaultInterpreterPath": "./.venv/Scripts/python",
+    "python.linting.pylintPath": "./.venv/Scripts/python",
+    "python.linting.pylintArgs": [
+        "--disable=c0111"
+    ],
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.tabSize": 4
+    }
+}
